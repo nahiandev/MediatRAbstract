@@ -1,2 +1,3 @@
 # MediatRAbstract
-CQRS implementation from scratch
+## CQRS without MediatR using same pattern from scratch
+
