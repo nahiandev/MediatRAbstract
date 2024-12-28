@@ -6,5 +6,4 @@ namespace MediatRAbstract.Service
     {
         Task<Result> StartFollowingAsync(User user, User followed, CancellationToken cancellationToken);
     }
-
 }

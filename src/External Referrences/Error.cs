@@ -2,14 +2,8 @@
 {
     public class Error
     {
-        public Error(string errorType, string msg)
-        {
-            
-        }
+        public Error(string errorType, string msg) { }
         
-        public Error()
-        {
-            
-        }
+        public Error() {}
     }
 }
