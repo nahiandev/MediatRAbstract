@@ -1,4 +1,6 @@
-﻿namespace MediatRAbstract.Abstractions.Messaging
+﻿using MediatRAbstract.External_References;
+
+namespace MediatRAbstract.Abstractions.Messaging
 {
     public interface ICommandHandler<in TCommand> where TCommand : ICommand
     {

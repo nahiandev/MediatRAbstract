@@ -1,4 +1,8 @@
 
+using MediatRAbstract.Repository;
+using MediatRAbstract.Service;
+using MediatRAbstract.Unit;
+
 namespace MediatRAbstract
 {
     public class Program
@@ -7,15 +11,17 @@ namespace MediatRAbstract
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // Add services to the container.
+            
 
             builder.Services.AddControllers();
-            // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
+            builder.Services.AddSingleton<ICrudRepository>();
+            builder.Services.AddSingleton<ICrudService>();
+            builder.Services.AddSingleton<IUnitOfWork>();
             builder.Services.AddOpenApi();
 
             var app = builder.Build();
 
-            // Configure the HTTP request pipeline.
+         
             if (app.Environment.IsDevelopment())
             {
                 app.MapOpenApi();

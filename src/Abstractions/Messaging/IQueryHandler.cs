@@ -1,4 +1,6 @@
-﻿namespace MediatRAbstract.Abstractions.Messaging
+﻿using MediatRAbstract.External_References;
+
+namespace MediatRAbstract.Abstractions.Messaging
 {
     public interface IQueryHandler<in TQuery, TResponse> where TQuery : IQuery<TResponse>
     {
